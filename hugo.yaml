@@ -1,0 +1,102 @@
+baseURL: "https://youkii-xr.github.io/blog"
+title: Youkii Blog
+pagination:
+  pagerSize: 5
+theme: PaperMod
+
+# Important for GitHub Pages subdirectory
+relativeURLs: false
+canonifyURLs: true
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: Youkii-blog
+  description: "Youkii blog"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Me
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    disableHLJS: false
+    disableFingerprinting: true
+    # Remove favicon references to avoid 404s - add them later when you have actual favicon files
+    # favicon: ""
+    # favicon16x16: ""
+    # favicon32x32: ""
+    # apple_touch_icon: ""
+    # safari_pinned_tab: ""
+
+  label:
+    text: "Home"
+    # Remove icon reference to avoid 404s
+    # icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog
+
+  socialIcons:
+    - name: x
+      url: "https://x.com/"
+    - name: stackoverflow
+      url: "https://stackoverflow.com"
+    - name: github
+      url: "https://github.com/youkii-xr"
+
+  editPost:
+    URL: "https://github.com/youkii-xr/youkii-xr.github.io/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /blog/categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /blog/tags/
+      weight: 20
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false

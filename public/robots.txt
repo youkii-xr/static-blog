@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://youkii-xr.github.io/blog/sitemap.xml
