@@ -1,5 +1,4 @@
 /* Custom styles added to demo */
-
 .twitter-tweet {
     margin: auto;
 }
@@ -14,4 +13,204 @@ iframe {
 
 .entry-cover img {
     border: 1px solid var(--border);
+}
+
+
+/* Force color overrides for light mode */
+:root {
+    --theme: #fdf6ec !important;        /* Main page background */
+    --entry: #fdf6ec !important;        /* Post cards background */
+    --primary: #5e4b41 !important;      /* Main text color */
+    --secondary: #5e4b41 !important;    /* Secondary text */
+    --tertiary: #c4a489 !important;     /* Subtle backgrounds */
+    --content: #5e4b41 !important;      /* Content area background */
+    --border: #c4a489 !important;       /* Border color */
+    --code-bg: #fcefdc !important;      /* Inline code background */
+    --hljs-bg: #fcefdc !important;      /* Code block background */
+}
+
+
+/* Force color overrides for dark mode */
+body.dark,
+[data-theme="dark"] {
+    --theme: #201814 !important;        /* Main page background */
+    --entry: #201814 !important;        /* Post cards background */
+    --primary: #f4b97d !important;      /* Main text color */
+    --secondary: #f4b97d !important;    /* Secondary text */
+    --tertiary: #8d7562 !important;     /* Subtle backgrounds */
+    --content: #e8dccf !important;      /* Content area background */
+    --border: #8d7562 !important;       /* Border color */
+    --code-bg: #5c4537 !important;      /* Inline code background */
+    --hljs-bg: #5c4537 !important;      /* Code block background */
+}
+
+
+
+/* Direct element targeting as backup */
+body {
+    background-color: var(--theme) !important;
+    color: var(--primary) !important;
+}
+
+.main {
+    background-color: var(--theme) !important;
+}
+
+.post-entry {
+    background-color: var(--entry) !important;
+    border-color: var(--border) !important;
+}
+
+.header {
+    background-color: var(--entry) !important;
+    border-bottom-color: var(--border) !important;
+}
+
+/* Apply accent colors to interactive elements */
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* Style links in post content */
+.post-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.post-content a:hover {
+    color: var(--accent-hover);
+    text-decoration-color: var(--accent-hover);
+}
+
+/* Style the header to match your portfolio */
+.header {
+    background-color: var(--header-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Navigation styling */
+.nav {
+    background-color: var(--nav-bg);
+}
+
+/* Button styling */
+.post-entry .entry-footer .read-more,
+button,
+.button {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--tertiary);
+    transition: all 0.3s ease;
+}
+
+.post-entry .entry-footer .read-more:hover,
+button:hover,
+.button:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+/* Tag styling */
+.terms-tags a {
+    background-color: var(--accent);
+    color: var(--tertiary);
+    border-radius: 4px;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.terms-tags a:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Post meta styling */
+.post-meta,
+.post-meta a {
+    color: var(--secondary);
+}
+
+/* Improve readability */
+.post-content {
+    line-height: 1.7;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+/* Code block styling */
+pre {
+    background-color: var(--hljs-bg) !important;
+    border: 1px solid var(--border);
+}
+
+code {
+    background-color: var(--code-bg);
+    color: var(--primary);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* Blockquote styling */
+blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+    margin-left: 0;
+    font-style: italic;
+    color: var(--secondary);
+    background-color: var(--entry);
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--accent);
+    color: white;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--entry);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
 }

@@ -28,7 +28,7 @@ params:
   disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: false
@@ -63,18 +63,18 @@ params:
     Title: "Hi there \U0001F44B"
     Content: Welcome to my blog
 
-  socialIcons:
-    - name: x
-      url: "https://x.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
-    - name: github
-      url: "https://github.com/youkii-xr"
+  # socialIcons:
+  #   - name: x
+  #     url: "https://x.com/"
+  #   - name: stackoverflow
+  #     url: "https://stackoverflow.com"
+  #   - name: github
+  #     url: "https://github.com/youkii-xr"
 
-  editPost:
-    URL: "https://github.com/youkii-xr/youkii-xr.github.io/content"
-    Text: "Suggest Changes"
-    appendFilePath: true
+  # editPost:
+  #   URL: "https://github.com/youkii-xr/youkii-xr.github.io/content"
+  #   Text: "Suggest Changes"
+  #   appendFilePath: true
 
   fuseOpts:
     isCaseSensitive: false
