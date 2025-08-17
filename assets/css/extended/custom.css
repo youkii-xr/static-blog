@@ -27,13 +27,16 @@ iframe {
     --border: #c4a489 !important;       /* Border color */
     --code-bg: #fcefdc !important;      /* Inline code background */
     --hljs-bg: #fcefdc !important;      /* Code block background */
+
+      /* Transition duration for theme changes */
+    --theme-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 /* Force color overrides for dark mode */
 body.dark,
 [data-theme="dark"] {
-    --theme: #201814 !important;        /* Main page background */
+    --theme: #261d18 !important;        /* Main page background */
     --entry: #201814 !important;        /* Post cards background */
     --primary: #f4b97d !important;      /* Main text color */
     --secondary: #f4b97d !important;    /* Secondary text */
@@ -42,11 +45,39 @@ body.dark,
     --border: #8d7562 !important;       /* Border color */
     --code-bg: #5c4537 !important;      /* Inline code background */
     --hljs-bg: #5c4537 !important;      /* Code block background */
+
 }
 
 
+/* Apply smooth transitions - simplified to prevent conflicts */
+html,
+body,
+.main,
+.header,
+.footer,
+.post-entry,
+.post-content,
+.nav,
+code,
+pre,
+blockquote,
+table,
+table th,
+table td {
+    transition: 
+        background-color var(--theme-transition, 0.4s ease),
+        color var(--theme-transition, 0.4s ease),
+        border-color var(--theme-transition, 0.4s ease) !important;
+}
 
-/* Direct element targeting as backup */
+
+/* Ensure SVG icons also transition smoothly */
+svg,
+svg * {
+    transition: fill var(--theme-transition, 0.4s ease), stroke var(--theme-transition, 0.4s ease) !important;
+}
+
+/* Direct element targeting with transitions */
 body {
     background-color: var(--theme) !important;
     color: var(--primary) !important;
@@ -56,15 +87,11 @@ body {
     background-color: var(--theme) !important;
 }
 
-.post-entry {
-    background-color: var(--entry) !important;
-    border-color: var(--border) !important;
-}
-
 .header {
     background-color: var(--entry) !important;
     border-bottom-color: var(--border) !important;
 }
+
 
 /* Apply accent colors to interactive elements */
 a {
@@ -164,10 +191,10 @@ pre {
 }
 
 code {
-    background-color: var(--code-bg);
-    color: var(--primary);
+    background-color: var(--code-bg) !important;
+    color: var(--primary) !important;
     padding: 2px 4px;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 0.9em;
 }
 
@@ -199,7 +226,7 @@ table td {
 
 table th {
     background-color: var(--accent);
-    color: white;
+    color: var(--content);
     font-weight: 600;
 }
 
@@ -213,4 +240,29 @@ table tr:nth-child(even) {
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
     }
+}
+
+
+
+/* Enhanced hover effects with transitions */
+.post-entry {
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease !important;
+}
+
+.post-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .post-entry:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth theme toggle animation */
+.theme-toggle {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.theme-toggle:hover {
+    transform: rotate(180deg);
 }
