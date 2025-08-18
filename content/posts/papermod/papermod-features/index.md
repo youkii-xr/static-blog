@@ -8,6 +8,7 @@ author: ["Youkii"]
 enableEmoji: true
 math: true
 showToc: true
+comment: true
 ---
 
 # heading 1

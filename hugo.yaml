@@ -112,7 +112,7 @@ menu:
       weight: 20
     - identifier: rss
       name: RSS
-      url: /index.xml
+      url: /blog/index.xml
       weight: 40
 pygmentsUseClasses: true
 markup:
