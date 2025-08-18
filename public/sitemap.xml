@@ -2,26 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://youkii-xr.github.io/blog/posts/papermod/papermod-features/</loc>
+    <loc>http://localhost:1313/blog/posts/papermod/papermod-features/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://youkii-xr.github.io/blog/posts/</loc>
+    <loc>http://localhost:1313/blog/posts/</loc>
+    <lastmod>2025-08-18T21:02:16+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/test-post4/</loc>
+    <lastmod>2025-08-18T21:02:16+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2025-08-18T21:02:16+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/test-post3/</loc>
     <lastmod>2025-08-18T20:57:51+03:00</lastmod>
   </url><url>
-    <loc>https://youkii-xr.github.io/blog/posts/test-post3/</loc>
-    <lastmod>2025-08-18T20:57:51+03:00</lastmod>
-  </url><url>
-    <loc>https://youkii-xr.github.io/blog/</loc>
-    <lastmod>2025-08-18T20:57:51+03:00</lastmod>
-  </url><url>
-    <loc>https://youkii-xr.github.io/blog/posts/test-post2/</loc>
+    <loc>http://localhost:1313/blog/posts/test-post2/</loc>
     <lastmod>2025-08-18T11:35:43+03:00</lastmod>
   </url><url>
-    <loc>https://youkii-xr.github.io/blog/posts/test-post/</loc>
+    <loc>http://localhost:1313/blog/posts/test-post/</loc>
     <lastmod>2025-08-18T11:30:49+03:00</lastmod>
   </url><url>
-    <loc>https://youkii-xr.github.io/blog/categories/</loc>
+    <loc>http://localhost:1313/blog/categories/</loc>
   </url><url>
-    <loc>https://youkii-xr.github.io/blog/tags/</loc>
+    <loc>http://localhost:1313/blog/tags/</loc>
   </url>
 </urlset>
