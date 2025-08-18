@@ -20,9 +20,9 @@ minify:
 params:
   env: production
   title: Youkii-blog
-  description: "Youkii blog"
-  keywords: [Blog, Portfolio, PaperMod]
-  author: Me
+  description: "All about XR, Unity & GameDev"
+  keywords: [XR, Unity, GameDev, Programming, Coding, Blog, news, C#]
+  author: Youkii-XR
   DateFormat: "January 2, 2006"
   defaultTheme: auto
   disableThemeToggle: false
@@ -31,18 +31,31 @@ params:
   ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false
+  comments: true
   hidemeta: false
   hideSummary: false
   showtoc: false
   tocopen: false
+  math: true
 
+  giscus:
+    repo: "youkii-xr/youkii-xr.github.io"
+    repoId: "R_kgDOJFDkiQ"  # Get from giscus.app
+    category: "General"
+    categoryId: "DIC_kwDOJFDkic4CuTQf"  # Get from giscus.app
+    mapping: "pathname"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "bottom"
+    theme: "preferred_color_scheme"
+    lang: "en"
+  
   assets:
     disableHLJS: false
     disableFingerprinting: true
@@ -62,6 +75,7 @@ params:
   homeInfoParams:
     Title: "Hi there \U0001F44B"
     Content: Welcome to my blog
+    mainSections: ["posts"]
 
   # socialIcons:
   #   - name: x
@@ -96,7 +110,14 @@ menu:
       name: tags
       url: /blog/tags/
       weight: 20
+    - identifier: rss
+      name: RSS
+      url: /index.xml
+      weight: 40
 pygmentsUseClasses: true
 markup:
   highlight:
     noClasses: false
+    style: "github"
+    lineNos: true
+    lineNumbersInTable: false
