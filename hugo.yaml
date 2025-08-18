@@ -44,18 +44,17 @@ params:
   tocopen: false
   math: true
 
-  commentsConfig:
-    giscus:
-      repo: "youkii-xr/youkii-xr.github.io"
-      repoId: "R_kgDOJFDkiQ"  # Get from giscus.app
-      category: "General"
-      categoryId: "DIC_kwDOJFDkic4CuTQf"  # Get from giscus.app
-      mapping: "pathname"
-      reactionsEnabled: "1"
-      emitMetadata: "0"
-      inputPosition: "bottom"
-      theme: "preferred_color_scheme"
-      lang: "en"
+  giscus:
+    repo: "youkii-xr/youkii-xr.github.io"
+    repoId: "R_kgDOJFDkiQ"  # Get from giscus.app
+    category: "General"
+    categoryId: "DIC_kwDOJFDkic4CuTQf"  # Get from giscus.app
+    mapping: "pathname"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "bottom"
+    theme: "preferred_color_scheme"
+    lang: "en"
   
   assets:
     disableHLJS: false
